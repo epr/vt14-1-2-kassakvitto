@@ -18,7 +18,14 @@ namespace KassaKvitto.Model
             }
             set
             {
-                _subtotal = value;
+                if (value > 0)
+                {
+                    _subtotal = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
         public double Total { get; private set; }

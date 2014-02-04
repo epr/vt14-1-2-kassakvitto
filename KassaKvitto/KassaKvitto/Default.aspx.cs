@@ -19,13 +19,12 @@ namespace KassaKvitto
         {
             if (IsValid)
             {
-                var sum = double.Parse(TotalSum.Text);
-                var receipt = new Receipt(sum);
-                ReceiptTable.Visible = true;
+                var receipt = new Receipt(double.Parse(TotalSum.Text));
                 Cost.Text = string.Format("{0:c}", receipt.Subtotal);
                 DiscountRate.Text = string.Format("{0:p0}", receipt.DiscountRate);
                 Discount.Text = string.Format("{0:c}", receipt.MoneyOff);
                 ToPay.Text = string.Format("{0:c}", receipt.Total);
+                ReceiptTable.Visible = true;
             }
         }
     }
