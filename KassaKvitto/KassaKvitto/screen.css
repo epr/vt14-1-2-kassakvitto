@@ -1,2 +1,41 @@
-﻿body {
+﻿.error {
+    color: red;
+}
+div {
+    margin: 10px;
+}
+.receipt {
+    text-align: center;
+    border: 1px solid #333;
+    box-shadow: 0 0 5px #222;
+    width: 250px;
+    background: #fafafa;
+    font-family: sans-serif;
+}
+.receipt h2 {
+    margin: 4px;;
+}
+.receipt h2 + p {
+    font-style: italic;
+    margin: 4px;
+}
+.receipt h2 + p > strong {
+    font-weight: normal;
+}
+.receipt dl {
+    border: 1px dashed black;
+    border-left: 0;
+    border-right: 0;
+    margin: 0 6px;
+    overflow: auto;
+}
+.receipt dt {
+    float: left;
+    clear: right;
+    margin: 4px 0;
+    font-weight: 600;
+}
+.receipt dd {
+    float: right;
+    margin: 4px 0;
 }

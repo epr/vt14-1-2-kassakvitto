@@ -13,15 +13,18 @@
         <label for="TotalSum">Total köpesumma:</label>
     </div>
     <div>
+        <%-- User input of sum --%>
         <asp:TextBox ID="TotalSum" runat="server" autofocus="autofocus"></asp:TextBox><asp:Label ID="SumUnit" runat="server" Text="kr"></asp:Label>
-        <asp:RequiredFieldValidator ControlToValidate="TotalSum" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Empty input" Display="Dynamic" Text="Fältet får inte lämnas tomt"></asp:RequiredFieldValidator>
-        <asp:CompareValidator ControlToValidate="TotalSum" ValueToCompare="0" Operator="GreaterThan" Type="Double" ID="CompareValidator1" runat="server" ErrorMessage="NotDoubleGreaterThanZero" Display="Dynamic" Text="Fältet måste innehålla ett flyttal större än noll."></asp:CompareValidator>
+        <asp:RequiredFieldValidator CssClass="error" ControlToValidate="TotalSum" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Empty input" Display="Dynamic" Text="Ange en total köpesumma."></asp:RequiredFieldValidator>
+        <asp:CompareValidator CssClass="error" ControlToValidate="TotalSum" ValueToCompare="0" Operator="GreaterThan" Type="Double" ID="CompareValidator1" runat="server" ErrorMessage="NotDoubleGreaterThanZero" Display="Dynamic" Text="Ange en total köpesumma större än 0."></asp:CompareValidator>
     </div>
     <div>
+        <%-- Action to calculate --%>
         <asp:Button ID="CalculateDiscount" runat="server" Text="Beräkna rabatt" OnClick="CalculateDiscount_Click" />
     </div>
-    <div>
-        <asp:PlaceHolder ID="ReceiptTable" runat="server" Visible="false">
+    <%-- Receipt presentation --%>
+    <asp:PlaceHolder ID="ReceiptTable" runat="server" Visible="false">
+        <div class="receipt">
             <h2>DeVe</h2>
             <p>en del av <strong>EllenU</strong></p>
             <p>Tel: 0772-28 80 00</p>
@@ -39,8 +42,8 @@
             </dl>
             <p>ORN.NR: 202100-6271</p>
             <p>VÄLKOMMEN ÅTER!</p>
-        </asp:PlaceHolder>
-    </div>
+        </div>
+    </asp:PlaceHolder>
     </form>
 </body>
 </html>
