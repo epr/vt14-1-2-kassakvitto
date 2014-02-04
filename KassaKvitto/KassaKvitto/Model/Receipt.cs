@@ -46,6 +46,7 @@ namespace KassaKvitto.Model
         }
         public Receipt(double subtotal)
         {
+            Calculate(subtotal);
         }
     }
 }
