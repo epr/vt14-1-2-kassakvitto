@@ -4,6 +4,7 @@
 <html>
 <head runat="server">
     <title>Kassakvitto - Eddy Proca</title>
+    <link href="~/screen.css" rel="stylesheet">
 </head>
 <body>
     <h1>Kassakvitto</h1>
@@ -13,8 +14,8 @@
     </div>
     <div>
         <asp:TextBox ID="TotalSum" runat="server" autofocus="autofocus"></asp:TextBox><asp:Label ID="SumUnit" runat="server" Text="kr"></asp:Label>
-        <asp:RequiredFieldValidator ControlToValidate="TotalSum" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fältet får inte lämnas tomt."></asp:RequiredFieldValidator>
-        <asp:CompareValidator ControlToValidate="TotalSum" ValueToCompare="0" Operator="GreaterThan" Type="Double" ID="CompareValidator1" runat="server" ErrorMessage="Fältet måste innehålla ett flyttal större än noll."></asp:CompareValidator>
+        <asp:RequiredFieldValidator ControlToValidate="TotalSum" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Empty input" Display="Dynamic" Text="Fältet får inte lämnas tomt"></asp:RequiredFieldValidator>
+        <asp:CompareValidator ControlToValidate="TotalSum" ValueToCompare="0" Operator="GreaterThan" Type="Double" ID="CompareValidator1" runat="server" ErrorMessage="NotDoubleGreaterThanZero" Display="Dynamic" Text="Fältet måste innehålla ett flyttal större än noll."></asp:CompareValidator>
     </div>
     <div>
         <asp:Button ID="CalculateDiscount" runat="server" Text="Beräkna rabatt" OnClick="CalculateDiscount_Click" />

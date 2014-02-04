@@ -17,17 +17,16 @@ namespace KassaKvitto
 
         protected void CalculateDiscount_Click(object sender, EventArgs e)
         {
-            var sum = double.Parse(TotalSum.Text);
-            var receipt = new Receipt(sum);
-            var subTotal = receipt.Subtotal;
-            var total = receipt.Total;
-            var discount = receipt.MoneyOff;
-            var rate = receipt.DiscountRate;
-            ReceiptTable.Visible = true;
-            Cost.Text = string.Format("{0:c}", subTotal);
-            DiscountRate.Text = string.Format("{0:p0}", rate);
-            Discount.Text = string.Format("{0:c}", discount);
-            ToPay.Text = string.Format("{0:c}", total);
+            if (IsValid)
+            {
+                var sum = double.Parse(TotalSum.Text);
+                var receipt = new Receipt(sum);
+                ReceiptTable.Visible = true;
+                Cost.Text = string.Format("{0:c}", receipt.Subtotal);
+                DiscountRate.Text = string.Format("{0:p0}", receipt.DiscountRate);
+                Discount.Text = string.Format("{0:c}", receipt.MoneyOff);
+                ToPay.Text = string.Format("{0:c}", receipt.Total);
+            }
         }
     }
 }
