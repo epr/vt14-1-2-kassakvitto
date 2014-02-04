@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receipt", "Receipt\Receipt.csproj", "{14190F52-7401-4814-9BFB-6C97D10A485F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KassaKvitto", "KassaKvitto\KassaKvitto.csproj", "{9ABE8940-1AEB-4FAE-ADFF-A2828AA51E7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14190F52-7401-4814-9BFB-6C97D10A485F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14190F52-7401-4814-9BFB-6C97D10A485F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14190F52-7401-4814-9BFB-6C97D10A485F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14190F52-7401-4814-9BFB-6C97D10A485F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ABE8940-1AEB-4FAE-ADFF-A2828AA51E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ABE8940-1AEB-4FAE-ADFF-A2828AA51E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ABE8940-1AEB-4FAE-ADFF-A2828AA51E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ABE8940-1AEB-4FAE-ADFF-A2828AA51E7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
