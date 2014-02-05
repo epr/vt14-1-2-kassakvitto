@@ -20,7 +20,7 @@ namespace KassaKvitto
             if (IsValid)
             {
                 var receipt = new Receipt(double.Parse(TotalSum.Text));
-                Cost.Text = string.Format("{0:c}", receipt.Subtotal);
+                Cost.Text = string.Format("{0:f} kr", receipt.Subtotal);
                 DiscountRate.Text = string.Format("{0:p0}", receipt.DiscountRate);
                 Discount.Text = string.Format("{0:c}", receipt.MoneyOff);
                 ToPay.Text = string.Format("{0:c}", receipt.Total);

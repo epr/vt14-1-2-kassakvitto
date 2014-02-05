@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Kassakvitto</h1>
-    <form id="receiptform" runat="server" defaultbutton="CalculateDiscount">
+    <form id="receiptform" runat="server">
     <div>
         <label for="TotalSum">Total köpesumma:</label>
     </div>
